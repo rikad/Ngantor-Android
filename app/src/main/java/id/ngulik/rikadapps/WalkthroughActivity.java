@@ -20,8 +20,8 @@ public class WalkthroughActivity extends AppCompatActivity {
         WalkthroughPagerAdapter myPagerAdapter = new WalkthroughPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(myPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayout);
-        tabLayout.setupWithViewPager(viewPager);
+//        TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayout);
+//        tabLayout.setupWithViewPager(viewPager);
 
     }
 
