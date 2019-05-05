@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">RikadApps</string>
     <string name="title_home_name">Rikad Fauzi Alawi</string>
+    <string name="title_home_skill">Network Engineer, Backend Programmer</string>
     <string name="title_home_motto">Ukireun Dina Lalangit \n Tataheun Dina Jero Iga</string>
+    <string name="title_home_alamat">Bandung, Padjajaran</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>
