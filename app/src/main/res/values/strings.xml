@@ -1,17 +1,25 @@
 <resources>
-    <string name="app_name">RikadApps</string>
+    <string name="app_name">Ngantor</string>
     <string name="title_home_name">Rikad Fauzi Alawi</string>
     <string name="title_home_skill">Network Engineer, Backend Programmer</string>
     <string name="title_home_motto">Ukireun Dina Lalangit \n Tataheun Dina Jero Iga</string>
     <string name="title_home_alamat">Bandung, Padjajaran</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_gallery">Gallery</string>
-    <string name="title_music">Music</string>
+    <string name="title_stat">Statistik</string>
     <string name="title_profile">Profile</string>
-    <string name="title_daily">Daily Activity</string>
+
+    <string name="home_position">Network Engineer</string>
+    <string name="home_name">Rikad Fauzi Alawi</string>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+    </string-array>
+
+
 </resources>

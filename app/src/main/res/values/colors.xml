@@ -6,4 +6,7 @@
     <color name="graylight">#FAFAFA</color>
     <color name="startblue">#09c6df</color>
     <color name="endblue">#0bcce6</color>
+    <color name="mainBg">#D6D6D6</color>
+    <color name="grayVeryLight">#E2E2E2</color>
+
 </resources>
