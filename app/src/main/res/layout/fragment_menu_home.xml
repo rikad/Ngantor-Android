@@ -12,8 +12,7 @@
         android:id="@+id/rectangle"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="1dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/grayVeryLight"
         />
@@ -22,8 +21,7 @@
         android:id="@+id/home_pallet"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="1dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/home_pallet" />
 
@@ -32,21 +30,24 @@
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="115dp"
+        android:layout_marginStart="115dp"
         android:layout_marginTop="20dp"
         android:layout_alignParentTop="true"
+        android:contentDescription="@string/app_name"
         app:srcCompat="@drawable/profile" />
 
     <TextView
         android:id="@+id/rikad_fauzi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:text="@string/home_name"
         android:gravity="top"
-        />
+        android:text="@string/home_name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/network_eng"
@@ -63,11 +64,57 @@
         android:id="@+id/rectangle_2"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_below="@id/home_pallet"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="260dp"
-        android:background="@drawable/home_bar"
-        />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="262dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/home_bar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_pallet"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/home_time"
+        android:textColor="@color/graylight"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_pallet"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="30dp"
+        android:width="260dp"
+        android:text="@string/home_location"
+        android:textColor="@color/graylight"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="205dp"
+        android:layout_height="199dp"
+        android:layout_below="@id/rectangle_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/main"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_absen" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="cursive"
+        android:text="@string/home_absen"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>
