@@ -95,7 +95,7 @@
         android:textSize="20sp" />
 
     <ImageButton
-        android:id="@+id/button"
+        android:id="@+id/btnAbsen"
         android:layout_width="205dp"
         android:layout_height="199dp"
         android:layout_below="@id/rectangle_2"
@@ -103,13 +103,15 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/main"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_absen" />
+        android:onClick="launchClick"
+        android:src="@drawable/ic_absen"
+        tools:ignore="OnClick" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button"
+        android:layout_below="@id/btnAbsen"
         android:layout_centerHorizontal="true"
         android:fontFamily="cursive"
         android:text="@string/home_absen"
