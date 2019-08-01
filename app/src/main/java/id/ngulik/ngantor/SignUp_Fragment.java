@@ -27,7 +27,7 @@ import retrofit2.Response;
 
 public class SignUp_Fragment extends Fragment implements OnClickListener {
     private static View view;
-    private static EditText fullName, emailId, mobileNumber, location,
+    private static EditText fullName, emailId, position, officeId,
             password, confirmPassword;
     private static TextView login;
     private static Button signUpButton;
@@ -50,9 +50,9 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
     private void initViews() {
         fullName = (EditText) view.findViewById(R.id.fullName);
         emailId = (EditText) view.findViewById(R.id.userEmailId);
-        mobileNumber = (EditText) view.findViewById(R.id.mobileNumber);
-        location = (EditText) view.findViewById(R.id.location);
         password = (EditText) view.findViewById(R.id.password);
+        position = (EditText) view.findViewById(R.id.position);
+        officeId = (EditText) view.findViewById(R.id.officeId);
         confirmPassword = (EditText) view.findViewById(R.id.confirmPassword);
         signUpButton = (Button) view.findViewById(R.id.signUpBtn);
         login = (TextView) view.findViewById(R.id.already_user);
@@ -94,11 +94,11 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
 
     }
 
-    private void doRegister(String name, String email, String password) {
+    private void doRegister(String name, String email, String password, String position, String officeId) {
         //Declare Retrofit
         ApiService api = ApiEndPoint.getClient().create(ApiService.class);
 
-        Call<ResponseModel> addSuperheroResponseModelCall = api.postRegister(name, email, password,"user");
+        Call<ResponseModel> addSuperheroResponseModelCall = api.postRegister(name, email, password, position, officeId);
         addSuperheroResponseModelCall.enqueue(new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
@@ -106,7 +106,7 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
                 String statusCode = response.body().getStatusCode();
                 String message = response.body().getMessage();
 
-                if (statusCode.equals("200")) {
+                if (statusCode.equals("ok")) {
                     if (message.equals("true")) {
                         new LoginActivity().replaceLoginFragment();
                         Toast.makeText(getActivity(), "Berhasil Silahkan Login", Toast.LENGTH_SHORT)
@@ -133,9 +133,9 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
         // Get all edittext texts
         String getFullName = fullName.getText().toString();
         String getEmailId = emailId.getText().toString();
-        String getMobileNumber = mobileNumber.getText().toString();
-        String getLocation = location.getText().toString();
         String getPassword = password.getText().toString();
+        String getPosition = position.getText().toString();
+        String getOfficeId = officeId.getText().toString();
         String getConfirmPassword = confirmPassword.getText().toString();
 
         // Pattern match for email id
@@ -145,9 +145,9 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
         // Check if all strings are null or not
         if (getFullName.equals("") || getFullName.length() == 0
                 || getEmailId.equals("") || getEmailId.length() == 0
-                || getMobileNumber.equals("") || getMobileNumber.length() == 0
-                || getLocation.equals("") || getLocation.length() == 0
                 || getPassword.equals("") || getPassword.length() == 0
+                || getOfficeId.equals("") || getOfficeId.length() == 0
+                || getPosition.equals("") || getPosition.length() == 0
                 || getConfirmPassword.equals("")
                 || getConfirmPassword.length() == 0)
 
@@ -171,7 +171,7 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
 
             // Else do signup or do your stuff
         else
-            doRegister(getFullName,getEmailId,getPassword);
+            doRegister(getFullName,getEmailId,getPassword,getPosition,getOfficeId);
 
     }
 }

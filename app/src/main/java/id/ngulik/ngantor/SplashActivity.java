@@ -17,12 +17,12 @@ public class SplashActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = getSharedPreferences(
                 "id.ngulik.ngantor.saved", getApplicationContext().MODE_PRIVATE);
-        final int user_id = sharedPref.getInt(getString(R.string.saved_user_id), 0);
+        final String user_id = sharedPref.getString(getString(R.string.saved_user_id), "0");
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(user_id != 0) {
+                if(Integer.parseInt(user_id) != 0) {
                     startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 } else {
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));

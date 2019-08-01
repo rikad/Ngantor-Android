@@ -4,6 +4,7 @@
     <string name="title_home_skill">Network Engineer, Backend Programmer</string>
     <string name="title_home_motto">Ukireun Dina Lalangit \n Tataheun Dina Jero Iga</string>
     <string name="title_home_alamat">Bandung, Padjajaran</string>
+    <string name="endpoint">http://batik.tf.itb.ac.id/ngantor/</string>
 
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
@@ -13,9 +14,10 @@
 
     <string name="home_position">Network Engineer</string>
     <string name="home_name">Rikad Fauzi Alawi</string>
-    <string name="home_location">Jln. Padjajaran, Kota Bandung</string>
+    <string name="home_location">100m</string>
     <string name="home_time">09:00</string>
     <string name="home_absen">absen</string>
+    <string name="home_type">Pulang</string>
 
     <string-array name="planets_array">
         <item>Mercury</item>
@@ -49,5 +51,8 @@
     <string name="saved_name">name</string>
     <string name="saved_email">email</string>
     <string name="saved_user_id">user_id</string>
+    <string name="saved_position">position</string>
+    <string name="saved_office_id">office_id</string>
+    <string name="saved_location">location</string>
 
 </resources>

@@ -17,7 +17,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/fullName"
+        android:id="@+id/name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -61,16 +61,16 @@
         android:background="@color/white_greyish" />
 
     <EditText
-        android:id="@+id/mobileNumber"
+        android:id="@+id/position"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
-        android:drawableLeft="@drawable/phone"
+        android:drawableLeft="@drawable/user"
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
-        android:hint="@string/mobileNumber"
-        android:inputType="phone"
+        android:hint="Position"
+        android:inputType="text"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/white"
@@ -83,16 +83,16 @@
         android:background="@color/white_greyish" />
 
     <EditText
-        android:id="@+id/location"
+        android:id="@+id/officeId"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
-        android:drawableLeft="@drawable/location"
+        android:drawableLeft="@drawable/user"
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
-        android:hint="@string/location"
-        android:inputType="textCapWords"
+        android:hint="Id Perusahaan"
+        android:inputType="number"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/white"

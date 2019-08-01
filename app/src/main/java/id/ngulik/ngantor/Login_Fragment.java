@@ -33,6 +33,7 @@ import android.widget.TextView;
 import id.ngulik.ngantor.api.ApiEndPoint;
 import id.ngulik.ngantor.api.ApiService;
 import id.ngulik.ngantor.model.ResponseModel;
+import id.ngulik.ngantor.model.UserModel;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -177,12 +178,19 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 
                 if (statusCode.equals("ok")) {
                     if (message.equals("true")) {
+
+                        UserModel user = response.body().getData();
+
                         SharedPreferences sharedPref = getActivity().getSharedPreferences(
                                 "id.ngulik.ngantor.saved", view.getContext().MODE_PRIVATE);
+
                         SharedPreferences.Editor editor = sharedPref.edit();
-                        editor.putString(getString(R.string.saved_email), email);
-                        editor.putString(getString(R.string.saved_name), "rikad");
-                        editor.putInt(getString(R.string.saved_user_id), 1);
+                        editor.putString(getString(R.string.saved_email), user.getEmail());
+                        editor.putString(getString(R.string.saved_name), user.getName());
+                        editor.putString(getString(R.string.saved_position), user.getPosition());
+                        editor.putString(getString(R.string.saved_office_id), user.getOfficeId());
+                        editor.putString(getString(R.string.saved_user_id), user.getId());
+                        editor.putString(getString(R.string.saved_location), user.getLocation());
                         editor.commit();
 
                         startActivity(new Intent(view.getContext(), MenuActivity.class));

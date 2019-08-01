@@ -37,7 +37,7 @@
         app:srcCompat="@drawable/profile" />
 
     <TextView
-        android:id="@+id/rikad_fauzi"
+        android:id="@+id/home_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -50,7 +50,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/network_eng"
+        android:id="@+id/home_position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -60,7 +60,7 @@
         android:gravity="top"
         />
 
-    <View
+    <LinearLayout
         android:id="@+id/rectangle_2"
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -69,30 +69,39 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="262dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/home_bar" />
+        android:orientation="horizontal"
+        android:background="@drawable/home_bar"
+        android:padding="20dp">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/home_pallet"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
         android:text="@string/home_time"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:textColor="@color/graylight"
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/home_pallet"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="30dp"
-        android:width="260dp"
         android:text="@string/home_location"
+        android:paddingStart="0dp"
+        android:paddingEnd="20dp"
         android:textColor="@color/graylight"
-        android:textSize="20sp" />
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_type"
+        android:textColor="@color/graylight"
+        android:textSize="30sp" />
+
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/btnAbsen"
@@ -117,6 +126,5 @@
         android:text="@string/home_absen"
         android:textSize="40sp"
         android:textStyle="bold" />
-
 
 </RelativeLayout>

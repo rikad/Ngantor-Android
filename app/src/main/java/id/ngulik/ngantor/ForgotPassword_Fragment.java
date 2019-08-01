@@ -1,7 +1,5 @@
 package id.ngulik.ngantor;
 
-import android.support.v4.app.Fragment;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 public class ForgotPassword_Fragment extends Fragment implements
         OnClickListener {
